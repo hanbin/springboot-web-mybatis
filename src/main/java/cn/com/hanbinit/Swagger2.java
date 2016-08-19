@@ -29,6 +29,11 @@ public class Swagger2 {
 				.paths(PathSelectors.any())
 				.build();
 	}
+	
+	/**
+	 * 配置
+	 * @return
+	 */
 	private ApiInfo apiInfo(){
 		return new ApiInfoBuilder()
 				.title("iblog api document")

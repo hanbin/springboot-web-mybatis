@@ -17,6 +17,7 @@ import io.swagger.annotations.ApiOperation;
 
 /**
  * 用户操作类(demo)
+ * GET用来获取资源，POST用来新建资源（也可以用于更新资源），PUT用来更新资源，DELETE用来删除资源
  * @author icer
  *
  */
@@ -66,6 +67,13 @@ public class UserController {
 		return users.get(id);
 	}
 	
+	/**
+	 * 拦截"/users/id"的PUT请求
+	 * 根据id更新用户信息
+	 * @param id
+	 * @param user
+	 * @return
+	 */
 	@RequestMapping(value="/{id}", method=RequestMethod.PUT)
 	public String putUser(@PathVariable Long id, @ModelAttribute User user){
 		User u = users.get(id);
@@ -74,6 +82,13 @@ public class UserController {
 		users.put(id, u);
 		return "success";
 	}
+	
+	/**
+	 * 拦截"/users/id"的DELETE请求
+	 * 根据id删除对应的用户
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping(value="/{id}", method=RequestMethod.DELETE)
 	public String delUser(@PathVariable Long id){
 		users.remove(id);
