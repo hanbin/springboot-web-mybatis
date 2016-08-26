@@ -15,4 +15,6 @@ public interface UserMapper {
 	
 	@Insert("insert into user(id,name,age) values(#{id}, #{name},#{age})")
 	int insert(@Param("id") Integer id, @Param("name") String name, @Param("age") Integer age);
+	
+	User findUserInfo();
 }

@@ -1,6 +1,7 @@
 package cn.com.hanbinit;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author icer
  *
  */
+@EnableAutoConfiguration
 @SpringBootApplication
 public class IblogApplication {
 	
