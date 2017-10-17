@@ -1,3 +1,2 @@
-#iblog
-一个简单的博客系统
-markdown
+整合spring boot, mybatis(xml方式,注解方式), freemarker.
+并提供页面跳转, web接口示例. 
